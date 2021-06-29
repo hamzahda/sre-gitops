@@ -2,6 +2,7 @@
 
 **Table of Contents**
 
+## First part optional
 ```shell
 minikube start --cpus 4 --memory 8192 docker-env --disk-size=80GB
 minikube profile list
@@ -65,6 +66,8 @@ minikube addons list
 | volumesnapshots             | minikube | disabled     |
 |-----------------------------|----------|--------------|
 ```
+
+## Link for the installation of FLUX https://fluxcd.io/docs/installation/
 
 ## install flux on Mac
 ```shell
