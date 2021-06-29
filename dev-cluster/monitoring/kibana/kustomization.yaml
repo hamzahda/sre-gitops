@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: monitoring
+commonLabels:
+  app: kibana
+images:
+  - name: kibana
+    newTag: 7.12.0
+    newName: docker.elastic.co/kibana/kibana
+  - name: busybox
+    newTag: 1.31.1
+    newName: busybox
+resources:
+  - service.yaml
+  - deployment.yaml
+configMapGenerator:
+  - name: kibana.yml
+    files:
+      - kibana/kibana.yml
+
